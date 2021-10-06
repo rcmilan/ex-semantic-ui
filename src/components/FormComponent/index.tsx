@@ -1,16 +1,16 @@
 import React from "react";
 import { Button, Form, Label } from "semantic-ui-react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { UserForm } from "../../types/userForm";
+import { Usuario } from "../../types/usuario";
 
 const FormComponent: React.FC = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<UserForm>();
+  } = useForm<Usuario>();
 
-  const submitForm: SubmitHandler<UserForm> = (data) => {
+  const submitForm: SubmitHandler<Usuario> = (data) => {
     if (!!errors) console.log(data);
   };
 
